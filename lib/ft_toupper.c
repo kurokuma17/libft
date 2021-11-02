@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 12:59:08 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/01 16:02:33 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/02 20:43:40 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/02 20:54:33 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int	main(int ac, char **av)
+int	ft_toupper(int c)
 {
-	if (ac != 2)
-		ft_putstr("Enter ONE string\n");
+	if (c >= 97 && c <= 122)
+		return (c - 32);
 	else
-	{
-		ft_putstr("Length of string: ");
-		ft_putnbr(ft_strlen(av[1]));
-		ft_putchar('\n');
-	}
+		return (c);
 }

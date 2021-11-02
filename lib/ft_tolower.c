@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:53:29 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/01 15:44:45 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/02 20:43:40 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/02 21:00:36 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int	main(void)
+int	ft_tolower(int c)
 {
-	ft_putnbr(2147483647);
-	ft_putchar('\n');
-	ft_putnbr(-2147483648);
-	ft_putchar('\n');
-	ft_putnbr(214748364);
-	ft_putchar('\n');
-	ft_putnbr(-23);
-	ft_putchar('\n');
-	ft_putnbr(000);
-	ft_putchar('\n');
-	ft_putnbr(15036 - 36);
-	ft_putchar('\n');
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
 }

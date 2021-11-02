@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpy.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 18:03:21 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/01 19:10:47 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/02 17:56:13 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/02 18:22:57 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
-#include <stdio.h>
-#include <string.h>
-int main(void)
+
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	char	src[20] = "Hello abc";
-	char	dst[100] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+	unsigned int	i;
 
-	printf("%s\n%s\n", src, dst);
-	strncpy(dst, src, 3);
-	printf("%s\n%s\n", src, dst);
-
+	i = 0;
+	if (len < (unsigned int)ft_strlen(src))
+	{
+		while (i < len)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+	}
+	else
+	{
+		while (i < (unsigned int)ft_strlen(src))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		while (i < len)
+		{	
+			dst[i] = '\0';
+			i++;
+		}
+	}
+	return (dst);
 }

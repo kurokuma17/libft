@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 13:29:46 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/01 16:02:29 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/02 20:02:43 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/02 20:10:20 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	ft_putstr(char const *s)
+int	ft_isalpha(int c)
 {
-	while (*s)
-	{
-		ft_putchar(*s);
-		s++;
-	}
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else
+		return (0);
 }
