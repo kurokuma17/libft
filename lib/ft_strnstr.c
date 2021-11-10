@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:10:50 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/08 12:34:53 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/04 16:53:42 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/04 16:55:10 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	ft_putnbr(int n)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if (n == -2147483648)
-		ft_putstr("-2147483648");
-	else if (n < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-n);
-	}
-	else if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else if (n >= 0 && n <= 9)
-		ft_putchar(n + '0');
+	int	i;
+
+	i = ft_strlen(needle);
+	if (i == 0)
+		return ((char *)haystack);
 	else
-		ft_putstr("Invalid input");
+	{
+		while (*needle && *haystack && len > 0)
+		{
+			if (*needle == *haystack)
+				needle++;
+			haystack++;
+			len--;
+		}
+		if (*needle == '\0')
+			return ((char *)(haystack - i));
+		else
+			return (0);
+	}
 }

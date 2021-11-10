@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:10:50 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/08 12:34:53 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/04 18:05:17 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/04 18:29:08 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	ft_putnbr(int n)
+char	*ft_strchr(const char *s, int c)
 {
-	if (n == -2147483648)
-		ft_putstr("-2147483648");
-	else if (n < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-n);
-	}
-	else if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else if (n >= 0 && n <= 9)
-		ft_putchar(n + '0');
+	while (*s && *s != c)
+		s++;
+	if (*s == c)
+		return ((char *)s);
 	else
-		ft_putstr("Invalid input");
+		return (0);
 }

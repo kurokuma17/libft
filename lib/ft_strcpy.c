@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:18:40 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/01 18:06:48 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/03 17:19:57 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < ft_strlen(src))

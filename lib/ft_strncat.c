@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:10:50 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/08 12:34:53 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/03 12:25:49 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/03 12:46:26 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	ft_putnbr(int n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	if (n == -2147483648)
-		ft_putstr("-2147483648");
-	else if (n < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-n);
-	}
-	else if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else if (n >= 0 && n <= 9)
-		ft_putchar(n + '0');
-	else
-		ft_putstr("Invalid input");
+	unsigned int	i;
+	unsigned int	j;
+
+	i = ft_strlen(s1);
+	j = 0;
+	while (j < n && s2[j])
+		s1[i++] = s2[j++];
+	s1[i] = '\0';
+	return (s1);
 }

@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:56:13 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/02 18:22:57 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/03 17:24:23 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	unsigned int	i;
 
 	i = 0;
-	if (len < (unsigned int)ft_strlen(src))
+	if (len < ft_strlen(src))
 	{
 		while (i < len)
 		{
@@ -27,7 +27,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 	}
 	else
 	{
-		while (i < (unsigned int)ft_strlen(src))
+		while (i < ft_strlen(src))
 		{
 			dst[i] = src[i];
 			i++;

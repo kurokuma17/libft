@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:10:50 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/08 12:34:53 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/08 13:31:46 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/08 13:48:40 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	ft_putnbr(int n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (n == -2147483648)
-		ft_putstr("-2147483648");
-	else if (n < 0)
+	while (n--)
 	{
-		ft_putchar('-');
-		ft_putnbr(-n);
+		if (*(unsigned char *)s1 != *(unsigned char *)s2)
+			return (*(unsigned char *)s1 - *(unsigned char *)s2);
+		else
+		{
+			s1++;
+			s2++;
+		}
 	}
-	else if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else if (n >= 0 && n <= 9)
-		ft_putchar(n + '0');
-	else
-		ft_putstr("Invalid input");
+	return (0);
 }
