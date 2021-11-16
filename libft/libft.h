@@ -6,12 +6,12 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:01:44 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:00:54 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/16 20:40:17 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H_
-# define LIBFT_H_
+#ifndef LIBFT_H
+# define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -28,7 +28,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t len);
+//void	*ft_memmove(void *dst, const void *src, size_t len);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 size_t	ft_strlen(const char *s);
@@ -55,34 +55,36 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 
-
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
-// void	ft_strclr(char *s);
+void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-// int		ft_strequ(char const *s1, char const *s2);
-// int		ft_strnequ(char const *s1, char const *s2, size_t n);
-// char	*ft_strsub(char const *s, unsigned int start, size_t len);
-// char	*ft_strjoin(char const *s1, char const *s2);
-// char	*ft_strtrim(char const *s);
-// char	**ft_strsplit(char const *s, char c);
+int		ft_strequ(char const *s1, char const *s2);						// untested
+int		ft_strnequ(char const *s1, char const *s2, size_t n);			// untested
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);										// not protected
+char	**ft_strsplit(char const *s, char c);							// ugly
+
 // char	*ft_itoa(int n);
 #endif
 
-/*
 // • memset			weird casting but so far works (?)
 // • bzero			weird casting but so far works (?)
-// • memcpy			need more testing!
+// • memcpy			need more testing! 
+//					[your memcpy does not behave well with NULL as both params with size]
 // • memccpy		need more testing!
-• memmove			works weirdly, need to free memory probably, different from generic functions
-					still very bad >"<
-// • memchr
+/*• memmove			works weirdly, need to free memory probably, 
+//					different from generic functions
+//					still very bad >"< */
+//					[your memmove does not well with NULL as both parameters and size]
+// • memchr 	[your memchr failed to find a \0]
 // • memcmp
 // • strlen
 // • strdup
@@ -90,7 +92,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 // • strncpy (pretty finnicky, not happy about this)
 // • strcat
 // • strncat
-• strlcat			works but not fully tested yet
+/*• strlcat			works but not fully tested yet*/
 // • strchr
 // • strrchr
 // • strstr
@@ -105,4 +107,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 // • isprint
 // • toupper
 // • tolower
-*/

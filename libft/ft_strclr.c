@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 15:00:40 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/15 16:41:57 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/14 21:42:15 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/14 22:01:25 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+void	ft_strclr(char *s)
 {
-	if (s)
+	while (*s)
 	{
-		ft_putstr_fd(s, fd);
-		ft_putchar_fd('\n', fd);
+		*s = '\0';
+		s++;
 	}
 }
