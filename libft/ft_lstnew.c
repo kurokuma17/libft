@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/06 16:30:03 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 18:37:54 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/20 18:56:38 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/21 14:17:33 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	size_t	i;
+	t_list	*link;
 
-	i = 0;
-	if (!dst && !src)
+	link = (t_list *)malloc(sizeof(*link));
+	if (!link)
 		return (NULL);
-	while (i < n)
+	if (content == NULL || content_size == 0)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i++;
+		link->content = NULL;
+		link->content_size = 0;
+		return (link);
 	}
-	return (dst);
+	link->content = (void *)malloc(content_size);
+	if (!link->content)
+		return (NULL);
+	ft_memcpy(link->content, content, content_size);
+	link->content_size = content_size;
+	link->next = NULL;
+	return (link);
 }

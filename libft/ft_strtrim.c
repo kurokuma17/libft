@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 19:13:59 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/15 21:19:20 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/18 16:12:41 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strtrim(char const *s)
 	unsigned int	k;
 	char			*res;
 
-	if (!*s)
+	if (!s || !*s)
 		return ("\0");
 	i = 0;
 	j = ft_strlen(s) - 1;

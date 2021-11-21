@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 20:43:40 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:10:07 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/19 12:25:00 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	else
 		return (c);

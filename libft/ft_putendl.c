@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 12:26:12 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:08:49 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/20 15:08:22 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	if (s)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
 }

@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 12:00:10 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 17:55:28 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/11/14 22:45:58 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/11/20 15:51:46 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	if (src < dst)
+	unsigned int	i;
+
+	i = 0;
+	if (s1 && s2)
 	{
-		while (len--)
-			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
+		if (n <= ft_strlen(s1) && n <= ft_strlen(s2))
+		{
+			if (ft_strncmp(s1, s2, n) == 0)
+				return (1);
+			else
+				return (0);
+		}
+		while (s1[i] && s2[i])
+		{
+			if (s1[i] != s2[i])
+				return (0);
+			i++;
+		}
 	}
-	else
-		ft_memcpy(dst, src, len);
-	return (dst);
+	return (1);
 }

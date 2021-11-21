@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:05:08 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:48:06 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/20 18:14:41 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char				*s2;
-	unsigned int		i;
+	char	*s2;
+	size_t	i;
 
 	i = 0;
 	s2 = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);

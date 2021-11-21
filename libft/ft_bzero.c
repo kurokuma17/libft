@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:09:38 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:07:44 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/21 16:18:02 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*(unsigned char *)s = 0;
-		i++;
-		s++;
+		((unsigned char *)s)[i++] = 0;
 	}
 }

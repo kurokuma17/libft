@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:09:03 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:09:23 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/20 15:54:16 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if (*s != '\0' && *f != '\0')
+	if (s && f)
 	{	
 		while (*s)
 		{

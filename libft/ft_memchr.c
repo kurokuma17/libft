@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 12:51:36 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 21:31:28 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:39:38 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	while (*(unsigned char *)s && n)
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-		if (*(unsigned char *)s == (unsigned char)c)
-			return ((void *)s);
-		s++;
-		n--;
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return (&((void *)s)[i]);
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

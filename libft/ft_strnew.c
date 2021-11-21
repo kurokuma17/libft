@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 14:57:32 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:09:49 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:04:46 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strnew(size_t size)
 	unsigned int	i;
 
 	i = 0;
-	new = (char *)malloc(sizeof(char) * size);
+	new = (char *)malloc(sizeof(char) * size + 1);
 	if (new == NULL)
 		return (NULL);
-	while (i < size)
-		new[i++] = '\0';
+	while (i <= size)
+		new[i++] = 0;
 	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 21:30:19 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:09:30 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/19 15:31:12 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
