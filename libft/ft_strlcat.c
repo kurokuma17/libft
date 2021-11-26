@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 17:35:21 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 18:09:00 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:54:32 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,21 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	buf;
-	size_t	i;
-	size_t	j;
 	size_t	dstlen;
+	size_t	res;
+	size_t	i;
 
 	dstlen = ft_strlen(dst);
-	i = ft_strlen(dst);
-	j = 0;
-	buf = dstsize - dstlen - 1;
-	if (i > dstsize)
-		return (dstsize + ft_strlen(src));
-	if (buf >= ft_strlen(src))
+	i = 0;
+	if (dstsize < dstlen)
+		res = dstsize + ft_strlen(src);
+	else
+		res = dstlen + ft_strlen(src);
+	while (dstlen + i + 1 < dstsize && src[i])
 	{
-		while (src[j])
-			dst[i++] = src[j++];
+		dst[dstlen + i] = src[i];
+		i++;
 	}
-	else if (buf < ft_strlen(src))
-	{
-		while (buf--)
-			dst[i++] = src[j++];
-	}
-	dst[i] = '\0';
-	return (dstlen + ft_strlen(src));
+	dst[dstlen + i] = '\0';
+	return (res);
 }

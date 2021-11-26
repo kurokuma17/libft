@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:23:31 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/16 20:17:56 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:18:25 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@ static unsigned int	ft_wordcount(char const *s, char c)
 	n = 0;
 	while (*s)
 	{
-		if (*s == c && *(s + 1) != c)
-			n = n + 1;
-		s++;
+		while (*s == c)
+			s++;
+		if (*s)
+			n++;
+		while (*s && *s != c)
+			s++;
 	}
 	return (n);
 }

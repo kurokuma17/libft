@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 22:45:58 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 15:51:46 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/26 13:36:14 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 	i = 0;
 	if (s1 && s2)
 	{
-		if (n <= ft_strlen(s1) && n <= ft_strlen(s2))
+		if (n <= ft_strlen(s1) || n <= ft_strlen(s2))
 		{
 			if (ft_strncmp(s1, s2, n) == 0)
 				return (1);
 			else
 				return (0);
 		}
-		while (s1[i] && s2[i])
+		while (s1[i] || s2[i])
 		{
 			if (s1[i] != s2[i])
 				return (0);

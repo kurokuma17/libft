@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:56:38 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/21 14:17:33 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:33:59 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,46 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	link = (t_list *)malloc(sizeof(*link));
 	if (!link)
 		return (NULL);
-	if (content == NULL || content_size == 0)
+	if (content == NULL)
 	{
 		link->content = NULL;
 		link->content_size = 0;
-		return (link);
 	}
-	link->content = (void *)malloc(content_size);
-	if (!link->content)
-		return (NULL);
-	ft_memcpy(link->content, content, content_size);
-	link->content_size = content_size;
+	else
+	{
+		link->content = (void *)malloc(content_size);
+		if (!link->content)
+		{
+			free(link);
+			return (NULL);
+		}
+		ft_memcpy(link->content, content, content_size);
+		link->content_size = content_size;
+	}
 	link->next = NULL;
 	return (link);
 }
+// t_list	*ft_lstnew(void const *content, size_t content_size)
+// {
+// 	t_list	*new;
+
+// 	if (!(new = (t_list *)malloc(sizeof(t_list))))
+// 		return (NULL);
+// 	if (!content)
+// 	{
+// 		new->content = NULL;
+// 		new->content_size = 0;
+// 	}
+// 	else
+// 	{
+// 		if (!(new->content = malloc(content_size)))
+// 		{
+// 			free(new);
+// 			return (NULL);
+// 		}
+// 		ft_memcpy(new->content, content, content_size);
+// 		new->content_size = content_size;
+// 	}
+// 	new->next = NULL;
+// 	return (new);
+// }
