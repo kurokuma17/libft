@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 17:35:21 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/26 15:54:32 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:21:08 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	dstlen;
 	size_t	res;
 	size_t	i;
+	size_t	dstlen;
 
 	dstlen = ft_strlen(dst);
 	i = 0;

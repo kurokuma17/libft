@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:23:31 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/26 12:18:25 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/11/26 16:19:09 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,17 @@ static unsigned int	ft_wordlen(char const *s, char c)
 	return (len);
 }
 
+static char	**ft_tabledel(char **ret, int len)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+		free(ret[i]);
+	free(ret);
+	return (NULL);
+}
+
 static char	**ft_split(char const *s, char c)
 {
 	char			**res;
@@ -58,7 +69,7 @@ static char	**ft_split(char const *s, char c)
 			j = 0;
 			res[i] = (char *)malloc(sizeof(char) * (ft_wordlen(s, c) + 1));
 			if (res[i] == NULL)
-				return (NULL);
+				return (ft_tabledel(res, i));
 			while (*s && *s != c)
 				res[i][j++] = *s++;
 			res[i++][j] = '\0';
