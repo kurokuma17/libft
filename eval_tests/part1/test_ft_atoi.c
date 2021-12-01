@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_atoi.c                                        :+:      :+:    :+:   */
+/*   test_ft_atoi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 17:15:35 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/30 18:34:40 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/01 20:35:18 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <assert.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdbool.h>
+#include "../../libftest.h"
 
 static int	test_atoi(void)
 {
@@ -50,15 +46,21 @@ static int	test_atoi(void)
 	else
 		return (false);
 }
-void test_atoi_all(void)
+
+void	test_atoi_all(void)
 {
 	if (test_atoi() == true)
-		printf("ft_atoi: OK\n");
+	{
+		pwhite();
+		printf("ft_atoi: ");
+		pgreen();
+		printf("0K\n");
+	}
 	else
-		printf("ft_atoi: FAIL\n");
-}
-
-int main()
-{
-	test_atoi_all();
+	{
+		pwhite();
+		printf("ft_atoi: ");
+		pred();
+		printf("FAIL\n");
+	}
 }
