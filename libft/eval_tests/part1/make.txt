@@ -1,0 +1,1 @@
+ comp ../utils.c ../../*.c *.c -o testp1 
