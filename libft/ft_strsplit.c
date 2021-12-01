@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:23:31 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/26 16:19:09 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/01 21:07:16 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,3 +88,45 @@ char	**ft_strsplit(char const *s, char c)
 	res = ft_split(s, c);
 	return (res);
 }
+
+
+// static char		*ft_strndup(const char *s, size_t n)
+// {
+// 	char			*str;
+
+// 	str = (char *)malloc(sizeof(char) * n + 1);
+// 	if (str == NULL)
+// 		return (NULL);
+// 	str = ft_strncpy(str, s, n);
+// 	str[n] = '\0';
+// 	return (str);
+// }
+
+// char			**ft_strsplit(char const *s, char c)
+// {
+// 	int				i;
+// 	int				j;
+// 	int				k;
+// 	char			**tab;
+
+// 	i = 0;
+// 	k = 0;
+// 	tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
+// 	if (tab == NULL)
+// 		return (NULL);
+// 	while (s[i])
+// 	{
+// 		while (s[i] == c)
+// 			i++;
+// 		j = i;
+// 		while (s[i] && s[i] != c)
+// 			i++;
+// 		if (i > j)
+// 		{
+// 			tab[k] = ft_strndup(s + j, i - j);
+// 			k++;
+// 		}
+// 	}
+// 	tab[k] = NULL;
+// 	return (tab);
+// }
