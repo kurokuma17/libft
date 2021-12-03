@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:45:24 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/03 11:38:39 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 14:27:20 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
 	test_bzero_all();
 	test_memset_all();
 	test_memcpy_all();
-//	test_memccpy_all();
+	test_memccpy_all();
 	test_memmove_all();
 	test_memcmp_all();
 	test_strlen_all();
