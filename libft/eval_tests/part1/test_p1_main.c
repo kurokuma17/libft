@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 16:45:24 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/02 20:52:25 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 11:38:39 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int main()
 	test_memmove_all();
 	test_memcmp_all();
 	test_strlen_all();
+	test_strdup_all();
 	return (0);
 }

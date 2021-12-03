@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:41:57 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/02 20:52:15 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 11:38:23 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	test_memcpy_all(void);
 void	test_memmove_all(void);
 void	test_memcmp_all(void);
 void	test_strlen_all(void);
+void	test_strdup_all(void);
 
 
 # endif

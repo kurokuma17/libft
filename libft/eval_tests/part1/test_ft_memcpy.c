@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 12:30:46 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/02 18:15:30 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 11:38:15 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int test_memcpy2(void)
 
 }
 
-void test_memcpy_all(void)
+void	test_memcpy_all(void)
 {
 	if (test_memcpy1() == true && test_memcpy2() == true)
 	{
