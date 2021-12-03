@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 20:48:55 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/02 20:51:56 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:02:36 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ void		test_strlen_all(void)
 		pwhite();
 		printf("ft_strlen: ");
 		pgreen();
-		printf("0K\n");
+		printf("\t0K\n");
 	}
 	else
 	{
 		pwhite();
 		printf("ft_strlen: ");
 		pred();
-		printf("FAIL\n");
+		printf("\tFAIL\n");
 	}
 }

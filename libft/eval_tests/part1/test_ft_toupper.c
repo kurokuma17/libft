@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:54:40 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/01 20:57:11 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:02:58 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,13 @@ void	test_toupper_all(void)
 		pwhite();
 		printf("ft_toupper: ");
 		pgreen();
-		printf("0K\n");
+		printf("\t0K\n");
 	}
 	else
 	{
 		pwhite();
 		printf("ft_toupper: ");
 		pred();
-		printf("FAIL\n");
+		printf("\tFAIL\n");
 	}
 }

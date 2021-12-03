@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:26:32 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/01 20:56:43 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:00:44 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ static int	test_isalnum1(void)
 	while (c < 150 && ft_isalnum(c) == isalnum(c))
 		c++;
 		if (c == 150)
-		return(1);
+		return(true);
 	else
-		return(0);
+		return(false);
 }
 
 void	test_isalnum_all(void)
@@ -32,14 +32,14 @@ void	test_isalnum_all(void)
 		pwhite();
 		printf("ft_isalnum: ");
 		pgreen();
-		printf("0K\n");
+		printf("\t0K\n");
 	}
 	else
 	{
 		pwhite();
 		printf("ft_isalnum: ");
 		pred();
-		printf("FAIL\n");
+		printf("\tFAIL\n");
 	}
 }
 

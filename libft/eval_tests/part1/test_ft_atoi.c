@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 17:15:35 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/01 20:54:41 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 15:57:22 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,13 @@ void	test_atoi_all(void)
 		pwhite();
 		printf("ft_atoi: ");
 		pgreen();
-		printf("0K\n");
+		printf("\t0K\n");
 	}
 	else
 	{
 		pwhite();
 		printf("ft_atoi: ");
 		pred();
-		printf("FAIL\n");
+		printf("\tFAIL\n");
 	}
 }

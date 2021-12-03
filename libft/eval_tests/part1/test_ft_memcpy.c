@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 12:30:46 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/03 11:38:15 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:02:04 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int test_memcpy2(void)
 
 	memcpy(arr1, src, sizeof(int) * 5);
 	ft_memcpy(arr2, src, sizeof(int) * 5);
-	if (memcmp(arr1, arr2, sizeof(int) * 5) == 0) // && memcmp(dst1 + 6, dst2 + 6, 4) == 0)
+	if (memcmp(arr1, arr2, sizeof(int) * 5) == 0)
 		return (true);
 	else
 		return (false);
@@ -48,13 +48,13 @@ void	test_memcpy_all(void)
 		pwhite();
 		printf("ft_memcpy: ");
 		pgreen();
-		printf("0K\n");
+		printf("\t0K\n");
 	}
 	else
 	{
 		pwhite();
 		printf("ft_memcpy: ");
 		pred();
-		printf("FAIL\n");
+		printf("\tFAIL\n");
 	}
 }

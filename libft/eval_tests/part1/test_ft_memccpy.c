@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 18:14:43 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/03 14:03:26 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:01:34 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,13 @@ void test_memccpy_all(void)
 		pwhite();
 		printf("ft_memccpy: ");
 		pgreen();
-		printf("0K\n");
+		printf("\t0K\n");
 	}
 	else
 	{
 		pwhite();
 		printf("ft_memccpy: ");
 		pred();
-		printf("FAIL\n");
+		printf("\tFAIL\n");
 	}
 }

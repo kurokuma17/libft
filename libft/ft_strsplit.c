@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 21:23:31 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/01 21:07:16 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:20:47 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,6 @@ char	**ft_strsplit(char const *s, char c)
 	res = ft_split(s, c);
 	return (res);
 }
-
 
 // static char		*ft_strndup(const char *s, size_t n)
 // {

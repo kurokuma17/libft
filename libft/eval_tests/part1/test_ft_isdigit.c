@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:24:41 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/01 20:56:48 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:00:53 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,26 @@ static int	test_isdigit1(void)
 	while (c < 150 && ft_isdigit(c) == isdigit(c))
 		c++;
 		if (c == 150)
-		return(1);
+		return(true);
 	else
-		return(0);
+		return(false);
 }
 
 void	test_isdigit_all(void)
 {
-	if (test_isdigit1() == 1)
+	if (test_isdigit1() == true)
 	{
 		pwhite();
 		printf("ft_isdigit: ");
 		pgreen();
-		printf("0K\n");
+		printf("\t0K\n");
 	}
 	else
 	{
 		pwhite();
 		printf("ft_isdigit: ");
 		pred();
-		printf("FAIL\n");
+		printf("\tFAIL\n");
 	}
 }
 

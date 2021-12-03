@@ -6,11 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:41:57 by trnguyen          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/12/03 11:38:23 by trnguyen         ###   ########.fr       */
-=======
-/*   Updated: 2021/12/03 14:19:39 by trnguyen         ###   ########.fr       */
->>>>>>> 56aaf178a7292b8837c35454a59aaccb749cc3a5
+/*   Updated: 2021/12/03 16:34:45 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +21,7 @@
 # include <stdlib.h>
 # include <ctype.h>
 # include <assert.h>
-#include <stdbool.h>
+# include <stdbool.h>
 
 // test functions
 
@@ -34,13 +30,13 @@ void	test_bzero_all(void);
 void	test_memcpy_all(void);
 void	test_memccpy_all(void);
 void	test_memmove_all(void);
-//void	test_memchr_all(void);
+void	test_memchr_all(void);
 void	test_memcmp_all(void);
 void	test_strlen_all(void);
 void	test_strdup_all(void);
-//void	test_strcpy_all(void);
-//void	test_strncpy_all(void);
-//void	test_strcat_all(void);
+void	test_strcpy_all(void);
+void	test_strncpy_all(void);
+void	test_strcat_all(void);
 //void	test_strncat_all(void);
 //void	test_strlcat_all(void);
 //void	test_strchr_all(void);
