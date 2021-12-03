@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:41:57 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/03 16:34:45 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:32:38 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	test_strdup_all(void);
 void	test_strcpy_all(void);
 void	test_strncpy_all(void);
 void	test_strcat_all(void);
-//void	test_strncat_all(void);
+void	test_strncat_all(void);
 //void	test_strlcat_all(void);
 //void	test_strchr_all(void);
 //void	test_strrchr_all(void);

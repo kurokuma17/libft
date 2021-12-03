@@ -6,13 +6,12 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 16:12:30 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/03 16:57:10 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:30:31 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftest.h"
-#define		STRING_1	"the cake is a lie !\0I'm hidden lol\r\n"
-#define		STRING_2	"there is no stars in the sky"
+
 static int test_strcat1(void)
 {
 	char	*src = "the cake is a lie !\0I'm hidden lol\r\n";
