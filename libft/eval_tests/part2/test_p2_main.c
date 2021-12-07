@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 22:38:34 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/06 22:39:56 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:56:08 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,27 @@ int main()
 {
 	printf("Part2:\n");
 	test_memalloc_all();
-	test_memdel();
-	test_strnew();
-	test_strdel();
-	test_strclr();
-	test_striter();
-	test_striteri();
-	test_strmap();
-	test_strmapi();
-	test_strequ();
-	test_strnequ();
-	test_strsub();
-	test_strjoin();
-	test_strtrim();
-	test_strsplit();
-	test_itoa();
-	test_putchar();
-	test_putstr();
-	test_putendl();
-	test_putnbr();
-	test_putchar_fd();
-	test_putstr_fd();
-	test_putendl_fd();
-	test_putnbr_fd();
+	test_memdel_all();
+	test_strnew_all();
+	test_strdel_all();
+	test_strclr_all();
+	test_striter_all();
+	test_striteri_all();
+	test_strmap_all();
+	test_strmapi_all();
+	test_strequ_all();
+	test_strnequ_all();
+	// test_strsub_all();
+	// test_strjoin_all();
+	// test_strtrim_all();
+	// test_strsplit_all();
+	// test_itoa_all();
+	// test_putchar_all();
+	// test_putstr_all();
+	// test_putendl_all();
+	// test_putnbr_all();
+	// test_putchar_fd_all();
+	// test_putstr_fd_all();
+	// test_putendl_fd_all();
+	// test_putnbr_fd_all();
 }

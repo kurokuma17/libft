@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:41:57 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/06 22:38:04 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/07 14:58:52 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,28 +55,28 @@ void	test_toupper_all(void);
 void	test_tolower_all(void);
 
 void	test_memalloc_all(void);
-void	test_memdel(void);
-void	test_strnew(void);
-void	test_strdel(void);
-void	test_strclr(void);
-void	test_striter(void);
-void	test_striteri(void);
-void	test_strmap(void);
-void	test_strmapi(void);
-void	test_strequ(void);
-void	test_strnequ(void);
-void	test_strsub(void);
-void	test_strjoin(void);
-void	test_strtrim(void);
-void	test_strsplit(void);
-void	test_itoa(void);
-void	test_putchar(void);
-void	test_putstr(void);
-void	test_putendl(void);
-void	test_putnbr(void);
-void	test_putchar_fd(void);
-void	test_putstr_fd(void);
-void	test_putendl_fd(void);
-void	test_putnbr_fd(void);
+void	test_memdel_all(void);
+void	test_strnew_all(void);
+void	test_strdel_all(void);
+void	test_strclr_all(void);
+void	test_striter_all(void);
+void	test_striteri_all(void);
+void	test_strmap_all(void);
+void	test_strmapi_all(void);
+void	test_strequ_all(void);
+void	test_strnequ_all(void);
+void	test_strsub_all(void);
+void	test_strjoin_all(void);
+void	test_strtrim_all(void);
+void	test_strsplit_all(void);
+void	test_itoa_all(void);
+void	test_putchar_all(void);
+void	test_putstr_all(void);
+void	test_putendl_all(void);
+void	test_putnbr_all(void);
+void	test_putchar_fd_all(void);
+void	test_putstr_fd_all(void);
+void	test_putendl_fd_all(void);
+void	test_putnbr_fd_all(void);
 
 # endif
