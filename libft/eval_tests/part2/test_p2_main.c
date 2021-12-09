@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 22:38:34 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/07 17:56:08 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/09 20:29:19 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ int main()
 	test_strmapi_all();
 	test_strequ_all();
 	test_strnequ_all();
-	// test_strsub_all();
-	// test_strjoin_all();
-	// test_strtrim_all();
-	// test_strsplit_all();
-	// test_itoa_all();
+	test_strsub_all();
+	test_strjoin_all();
+	test_strtrim_all();
+	test_strsplit_all();
+	test_itoa_all();
 	// test_putchar_all();
 	// test_putstr_all();
 	// test_putendl_all();
