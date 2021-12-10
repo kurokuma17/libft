@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:41:57 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/09 20:24:43 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/10 15:19:40 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # include <assert.h>
 # include <stdbool.h>
 # include <limits.h>
-
+# include <fcntl.h>
 // test functions
 
 void	test_memset_all(void);
