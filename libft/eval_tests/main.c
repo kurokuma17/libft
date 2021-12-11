@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_p1_main.c                                     :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 16:45:24 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/06 22:40:07 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/12/10 18:41:16 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/10 18:53:11 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
-#include "../libftest.h"
-#include "../utils.h"
+#include "../libft.h"
+#include "libftest.h"
+#include "utils.h"
 
 int main()
 {
-	printf("Part2:\n");
+	printf("\n\tPART 1:\n\n");
 	test_memset_all();
 	test_bzero_all();
 	test_memcpy_all();
@@ -45,5 +45,30 @@ int main()
 	test_isprint_all();
 	test_toupper_all();
 	test_tolower_all();
-	return (0);
+	pwhite();
+	printf("\n\tPART 2:\n\n");
+	test_memalloc_all();
+	test_memdel_all();
+	test_strnew_all();
+	test_strdel_all();
+	test_strclr_all();
+	test_striter_all();
+	test_striteri_all();
+	test_strmap_all();
+	test_strmapi_all();
+	test_strequ_all();
+	test_strnequ_all();
+	test_strsub_all();
+	test_strjoin_all();
+	test_strtrim_all();
+	test_strsplit_all();
+	test_itoa_all();
+	test_putchar_all();
+	test_putstr_all();
+	test_putendl_all();
+	test_putnbr_all();
+	test_putchar_fd_all();
+	test_putstr_fd_all();
+	test_putendl_fd_all();
+	test_putnbr_fd_all();
 }

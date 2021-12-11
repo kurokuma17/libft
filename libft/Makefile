@@ -6,7 +6,7 @@
 #    By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/14 20:12:59 by trnguyen          #+#    #+#              #
-#    Updated: 2021/11/26 16:00:24 by trnguyen         ###   ########.fr        #
+#    Updated: 2021/12/10 18:28:35 by trnguyen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,6 @@ SRCS			=	ft_putchar.c ft_putstr.c ft_putnbr.c ft_putendl.c \
 					
 OBJS			= $(SRCS:.c=.o)
 
-BONUS_OBJS		= $(BONUS:.c=.o)
-
 CC				= @ gcc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror -I. 
@@ -41,14 +39,11 @@ $(NAME):		$(OBJS)
 				@ $(RM) $(OBJS)
 				
 clean:
-				@ $(RM) $(OBJS) $(BONUS_OBJS)
+				@ $(RM) $(OBJS)
 
 fclean:			clean
 				@ $(RM) $(NAME)
 
 re:				fclean $(NAME)
 
-bonus:			$(OBJS) $(BONUS_OBJS)
-				@ ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-
-.PHONY:			@ all clean fclean re bonus
+.PHONY:			@ all clean fclean re
