@@ -1,4 +1,5 @@
-for f in part1/*.test part2/*.test
+#!/bin/bash
+for f in part1/*.c part2/*.c
 do
-	mv "$f" "${f%.test}"
+	mv "$f" "${f}.test"
 done

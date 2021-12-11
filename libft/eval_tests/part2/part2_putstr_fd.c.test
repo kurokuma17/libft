@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putstr_fd.c                                   :+:      :+:    :+:   */
+/*   part2_putstr_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:38:21 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/10 15:57:29 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/11 13:49:41 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	test_putstr_fd_all(void)
 	int		p[2];
 	char	*str = "Hello from the other side\n";
 	char	buf[27];
-	int		fd = open("putstr_fd.txt", O_WRONLY | O_CREAT | O_TRUNC | O_APPEND);
+	int		fd = open("putstr_fd.txt", O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
 
 	tmp = dup(fd);
 	pipe(p);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_putchar_fd.c                                  :+:      :+:    :+:   */
+/*   part2_putchar_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 14:35:59 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/10 15:19:27 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/11 13:49:04 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	test_putchar_fd_all(void)
 	int		tmp;
 	int		p[2];
 	char	buf[4];
-	int		fd = open("putchar_fd.txt", O_RDWR| O_CREAT | O_APPEND);
+	int		fd = open("putchar_fd.txt", O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
 
 	tmp = dup(fd);
 	pipe(p);

@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 18:41:16 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/10 18:53:11 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/11 13:41:33 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,12 @@ int main()
 	test_putstr_fd_all();
 	test_putendl_fd_all();
 	test_putnbr_fd_all();
+	pwhite();
+	printf("\n\tBONUS PART:\n\n");
+	test_lstnew_all();
+	test_lstdelone_all();
+	test_lstdel_all();
+	test_lstadd_all();
+	test_lstiter_all();
+	test_lstmap_all();
 }

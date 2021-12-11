@@ -1,47 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   part2_putendl_fd.c                                 :+:      :+:    :+:   */
+/*   bonus_lstiter.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/10 16:02:04 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/11 13:49:21 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/12/11 13:25:30 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/11 13:33:46 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libftest.h"
 
-void	test_putendl_fd_all(void)
+static void		ft_iterl(t_list *m)
 {
-	int		tmp;
-	int		p[2];
-	char	*str = "Hello from the other side";
-	char	*ref = ft_strjoin(str, "\n");
-	char	buf[27];
-	int		fd = open("putendl_fd.txt", O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
+	free(m->content);
+	m->content = strdup("OK !");
+	m->content_size = 5;
+}
 
-	tmp = dup(fd);
-	pipe(p);
-	dup2(p[1], fd);
-	ft_putendl_fd(str, fd);
-	dup2(tmp, fd);
-	read(p[0], buf, 26);
-	buf[26] = 0;
-	close(p[0]);
-	close(p[1]);
-	close(tmp);
-	if (strcmp(buf, ref) == 0)
+
+void	test_lstiter_all(void)
+{
+	t_list	*l = ft_lstnew(strdup(" 1 2 3 "), 8);
+
+	l->next = ft_lstnew(strdup("ss"), 3);
+	l->next->next = ft_lstnew(strdup("-_-"), 4);
+	ft_lstiter(l, ft_iterl);
+	if (!strcmp(l->content, "OK !") && !strcmp(l->next->content, "OK !") && 
+		!strcmp(l->next->next->content, "OK !"))
 	{
 		pwhite();
-		printf("ft_putendl_fd: ");
+		printf("ft_lstiter: ");
 		pgreen();
 		printf("\t0K\n");
 	}
 	else
 	{
 		pwhite();
-		printf("ft_putendl_fd: ");
+		printf("ft_lstiter: ");
 		pred();
 		printf("\tFAIL\n");
 	}

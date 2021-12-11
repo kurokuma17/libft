@@ -5,7 +5,7 @@ void	test_putnbr_fd_all(void)
 	int		tmp;
 	int		p[2];
 	char	buf[100];
-	int		fd = open("putnbr_fd.txt", O_WRONLY | O_CREAT | O_TRUNC | O_APPEND);
+	int		fd = open("putnbr_fd.txt", O_RDWR | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
 
 	tmp = dup(fd);
 	pipe(p);
