@@ -6,7 +6,7 @@
 #    By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/10 16:36:51 by trnguyen          #+#    #+#              #
-#    Updated: 2021/12/11 13:59:14 by trnguyen         ###   ########.fr        #
+#    Updated: 2021/12/11 21:02:14 by trnguyen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,9 @@ SRCS2	=	part2/part2_itoa.c part2/part2_memalloc.c part2/part2_memdel.c \
 SRCSB	=	bonus/bonus_lstnew.c bonus/bonus_lstdelone.c bonus/bonus_lstdel.c \
 			bonus/bonus_lstadd.c bonus/bonus_lstiter.c bonus/bonus_lstmap.c
 
+SRCSBB	= 	bonus2/bonus2_isspace.c bonus2/bonus2_strndup.c\
+			bonus2/bonus2_lstadd_back.c bonus2/bonus2_lstsize.c
+
 INCLUDES =	libftest.h utils.h
 OBJS 		= *.o
 LIB			= ../libft.a
@@ -45,7 +48,7 @@ NAME		= libft_test
 
 all:		$(NAME)
 
-$(NAME):	obj1 obj2 objb $(LIB)
+$(NAME):	obj1 obj2 objb objbb $(LIB)
 			@ $(CC) $(CFLAGS) -I. $(INCLUDES) -c  utils.c main.c
 			$(CC) $(CFLAGS) -L.. -lft *.o -o $(NAME)
 		
@@ -55,6 +58,8 @@ obj2:		$(SRCS2)
 			@ $(CC) $(CFLAGS) -c $(SRCS2)
 objb:		$(SRCSB)
 			@ $(CC) $(CFLAGS) -c $(SRCSB)
+objbb:		$(SRCSBB)
+			@ $(CC) $(CFLAGS) -c $(SRCSBB)
 normcheck:
 			norminette ../*.c ../libft.h
 makecheck:

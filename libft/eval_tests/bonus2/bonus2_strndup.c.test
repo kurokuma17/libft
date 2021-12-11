@@ -1,0 +1,82 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bonus2_strndup.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/11 20:53:41 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/11 21:13:55 by trnguyen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../libftest.h"
+
+static int	test_strndup1(void)
+{
+	char	*str;
+	char	*tmp = "I malloc so I am.";
+
+	str = ft_strndup(tmp, strlen(tmp));
+	if (strcmp(str, tmp) == 0)
+		return (true);
+	else
+		return (false);
+	free(str);
+}
+
+static int	test_strndup2(void)
+{
+	char	*str;
+	char	*tmp = "I malloc so I am.";
+	char	*res=  "I m";
+
+	str = ft_strndup(tmp, 3);
+	if (strcmp(str, res) == 0)
+		return (true);
+	else
+		return (false);
+}
+
+static int	test_strndup3(void)
+{
+	char 	*str;
+	char	*tmp = "HAHAHA \0 tu me vois pas !";
+
+	str = ft_strndup(tmp, 12);
+	if (strcmp(str, tmp) == 0)
+		return (true);
+	else
+		return (false);
+}
+
+static int	test_strndup4(void)
+{
+	char 	*str;
+	char	*tmp = "";
+
+	str = ft_strndup(tmp, 5);
+	if (strcmp(str, tmp) == 0)
+		return (true);
+	else
+		return (false);
+}
+
+void	test_strndup_all(void)
+{
+	if (test_strndup1() == true && test_strndup2() == true &&
+		test_strndup3() == true && test_strndup4() == true)
+	{
+		pwhite();
+		printf("ft_strndup: ");
+		pgreen();
+		printf("\t0K\n");
+	}
+	else
+	{
+		pwhite();
+		printf("ft_strndup: ");
+		pred();
+		printf("\tFAIL\n");
+	}
+}

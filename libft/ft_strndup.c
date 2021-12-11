@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 15:28:05 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/11 19:15:15 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/12/11 19:23:32 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/11 19:46:13 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+char	*ft_strndup(const char *s1, size_t n)
 {
-	t_list	*new;
-	t_list	*head;
+	char	*s2;
 
-	if (!lst || !f)
+	s2 = (char *)malloc(sizeof(char) * n + 1);
+	if (s2 == NULL)
 		return (NULL);
-	head = NULL;
-	while (lst)
-	{
-		new = f(ft_lstnew(lst->content, lst->content_size));
-		ft_lstadd_back(&head, new);
-		lst = lst->next;
-	}
-	return (head);
+	s2 = ft_strncpy(s2, s1, n);
+	s2[n] = '\0';
+	return (s2);
 }

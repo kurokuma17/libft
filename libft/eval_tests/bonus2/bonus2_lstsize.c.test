@@ -1,0 +1,61 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bonus2_lstsize.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/11 20:38:16 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/11 20:41:15 by trnguyen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../libftest.h"
+
+static int test_lstsize1(void)
+{
+	t_list	*l;
+	int actual;
+	int expected;
+
+	l = ft_lstnew(ft_strdup("1"), 2);
+	l->next = ft_lstnew(ft_strdup("2"), 2);
+	l->next->next = ft_lstnew(ft_strdup("3"),2);
+	expected = 3;
+	actual = ft_lstsize(l);
+	if (actual == expected)
+		return (true);
+	else
+		return (false);
+}
+
+static int test_lstsize2(void)
+{
+	t_list	*l = NULL;
+	int actual;
+	int expected = 0;
+
+	actual = ft_lstsize(l);
+	if (actual == expected)
+		return (true);
+	else
+		return (false);
+}
+
+void	test_lstsize_all(void)
+{
+	if (test_lstsize1() == true && test_lstsize2() == true)
+	{
+		pwhite();
+		printf("ft_lstsize: ");
+		pgreen();
+		printf("\t0K\n");
+	}
+	else
+	{
+		pwhite();
+		printf("ft_lstsize: ");
+		pred();
+		printf("\tFAIL\n");
+	}
+}
