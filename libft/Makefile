@@ -6,7 +6,7 @@
 #    By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/14 20:12:59 by trnguyen          #+#    #+#              #
-#    Updated: 2021/12/11 20:24:47 by trnguyen         ###   ########.fr        #
+#    Updated: 2021/12/12 23:53:40 by trnguyen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SRCS		=	ft_putchar.c ft_putstr.c ft_putnbr.c ft_putendl.c \
 				ft_strjoin.c ft_strtrim.c ft_strsplit.c ft_itoa.c \
 				ft_lstnew.c ft_lstadd.c ft_lstdelone.c \
 				ft_lstiter.c ft_lstdel.c ft_lstmap.c \
-				ft_lstsize.c ft_lstadd_back.c ft_strndup.c ft_isspace.c 
+				ft_lstsize.c ft_lstadd_back.c ft_lstlast.c \
+				ft_strndup.c ft_isspace.c ft_strcspn.c
 
 OBJS		=	$(SRCS:.c=.o)
 

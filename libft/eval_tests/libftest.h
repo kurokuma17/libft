@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:41:57 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/11 20:53:31 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 13:29:58 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ void	test_isspace_all(void);
 void	test_strndup_all(void);
 void	test_lstadd_back_all(void);
 void	test_lstsize_all(void);
+void	test_lstlast_all(void);
 
 # endif

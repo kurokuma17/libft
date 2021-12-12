@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:31:46 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/24 17:39:27 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 20:42:29 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	while (n--)
 	{
-		if (*(unsigned char *)s1 != *(unsigned char *)s2)
-			return (*(unsigned char *)s1 - *(unsigned char *)s2);
+		if (*(const unsigned char *)s1 != *(const unsigned char *)s2)
+			return (*(const unsigned char *)s1 - *(const unsigned char *)s2);
 		else
 		{
 			s1++;

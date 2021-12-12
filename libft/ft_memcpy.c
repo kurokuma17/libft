@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 16:30:03 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 18:37:54 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 20:46:23 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		return (NULL);
 	while (i < n)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		((unsigned char *)dst)[i] = ((const unsigned char *)src)[i];
 		i++;
 	}
 	return (dst);

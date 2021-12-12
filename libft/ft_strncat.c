@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:25:49 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:09:40 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 22:12:22 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = ft_strlen(s1);
 	j = 0;

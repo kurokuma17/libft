@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:54:47 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:09:36 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 22:09:52 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	res = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (res == NULL)
+	res = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!res)
 		return (NULL);
 	while (s[i])
 	{

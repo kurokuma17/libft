@@ -6,7 +6,7 @@
 #    By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/10 16:36:51 by trnguyen          #+#    #+#              #
-#    Updated: 2021/12/11 21:02:14 by trnguyen         ###   ########.fr        #
+#    Updated: 2021/12/12 13:14:13 by trnguyen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ SRCSB	=	bonus/bonus_lstnew.c bonus/bonus_lstdelone.c bonus/bonus_lstdel.c \
 			bonus/bonus_lstadd.c bonus/bonus_lstiter.c bonus/bonus_lstmap.c
 
 SRCSBB	= 	bonus2/bonus2_isspace.c bonus2/bonus2_strndup.c\
-			bonus2/bonus2_lstadd_back.c bonus2/bonus2_lstsize.c
+			bonus2/bonus2_lstadd_back.c bonus2/bonus2_lstsize.c \
+			bonus2/bonus2_lstlast.c
 
 INCLUDES =	libftest.h utils.h
 OBJS 		= *.o

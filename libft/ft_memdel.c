@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 18:57:09 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 16:00:34 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 20:48:30 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_memdel(void **ap)
 {
-	if (ap)
+	if (ap && *ap)
 	{
 		free(*ap);
 		*ap = NULL;

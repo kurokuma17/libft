@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 21:42:15 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 15:58:22 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 21:22:34 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,5 @@
 void	ft_strclr(char *s)
 {
 	if (s)
-	{
-		while (*s)
-		{
-			*s = '\0';
-			s++;
-		}
-	}
+		ft_memset(s, 0, ft_strlen(s));
 }

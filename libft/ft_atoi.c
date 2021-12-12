@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 20:53:49 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:07:33 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 19:52:21 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,15 @@ int	ft_atoi(const char *str)
 
 	res = 0;
 	sign = 1;
-	while (*str == '\t' || *str == '\n' || *str == '\v'
-		|| *str == '\f' || *str == '\r' || *str == ' ')
+	while (*str && ft_isspace(*str))
 		str++;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
 			sign = -1;
-		str += 1;
+		str++;
 	}
-	while (ft_isdigit(*str))
+	while (*str && ft_isdigit(*str))
 	{
 		res = *str - '0' + res * 10;
 		str++;

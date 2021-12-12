@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:40:04 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:07:54 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 19:56:14 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if (c < 48 || c > 57)
+	if (c < '0' || c > '9')
 		return (0);
 	else
 		return (1);

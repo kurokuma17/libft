@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 22:45:58 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/12 21:48:53 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/12/12 13:04:33 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/12 20:26:19 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (s1 && s2)
-		return (ft_strncmp(s1, s2, n) == 0);
-	return (0);
+	t_list	*last;
+
+	last = lst;
+	if (last == NULL)
+		return (NULL);
+	while (last->next)
+		last = last->next;
+	return (last);
 }

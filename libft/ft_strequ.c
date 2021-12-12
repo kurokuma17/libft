@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 22:31:50 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 15:45:19 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 21:46:38 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,6 @@
 int	ft_strequ(char const *s1, char const *s2)
 {
 	if (s1 && s2)
-	{
-		while (*s1 || *s2)
-		{
-			if (*s1 != *s2)
-				return (0);
-			s1++;
-			s2++;
-		}
-		return (1);
-	}
+		return (ft_strcmp(s1, s2) == 0);
 	return (0);
 }

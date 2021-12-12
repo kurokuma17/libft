@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 20:15:50 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/11 20:42:42 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 20:34:57 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 int	ft_lstsize(t_list *begin_list)
 {
 	int		size;
-	t_list	*l;
+	t_list	*lst;
 
 	size = 0;
-	l = begin_list;
-	while (l)
+	lst = begin_list;
+	while (lst)
 	{
 		size++;
-		l = l->next;
+		lst = lst->next;
 	}
 	return (size);
 }

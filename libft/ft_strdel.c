@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:57:08 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 15:58:03 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 21:32:36 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_strdel(char **as)
 {
-	if (as)
+	if (as && *as)
 	{
 		free(*as);
 		*as = NULL;

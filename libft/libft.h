@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:01:44 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/11 20:43:01 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 23:57:07 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
@@ -81,10 +82,11 @@ void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-// additional functions
 int		ft_isspace(int c);
 char	*ft_strndup(const char *s1, size_t n);
 void	ft_lstadd_back(t_list **alst, t_list *new);
 int		ft_lstsize(t_list *begin_list);
+t_list	*ft_lstlast(t_list *lst);
+size_t	ft_strcspn(const char *s, const char *charset);
 
 #endif

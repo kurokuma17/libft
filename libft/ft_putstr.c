@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:29:46 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/20 15:07:46 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 21:14:42 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,5 @@
 void	ft_putstr(char const *s)
 {
 	if (s)
-	{
-		while (*s)
-		{
-			ft_putchar(*s);
-			s++;
-		}
-	}
+		write(1, s, ft_strlen(s));
 }

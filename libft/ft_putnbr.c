@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:10:50 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:08:56 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/12 21:10:17 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ void	ft_putnbr(int n)
 		ft_putnbr(n / 10);
 		ft_putnbr(n % 10);
 	}
-	else if (n >= 0 && n <= 9)
-		ft_putchar(n + '0');
 	else
-		ft_putstr("Invalid input");
+		ft_putchar(n + '0');
 }
