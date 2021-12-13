@@ -1,3 +1,5 @@
+super short and basic tests..
+
 check norminette
 
 place eval_tests inside the project folder
