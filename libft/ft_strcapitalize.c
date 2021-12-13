@@ -1,21 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 20:43:40 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/13 16:55:59 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/12/13 18:54:09 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/13 20:37:19 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strcapitalize(char *str)
 {
-	if (ft_islower(c))
-		return (c - 32);
-	else
-		return (c);
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+	{
+		while (!ft_isalpha(str[i]))
+			i++;
+		if (ft_islower(str[i]))
+			str[i] = ft_toupper(str[i]);
+		while (!ft_isspace(str[i]))
+		{
+			str[i] = ft_tolower(str[i]);	
+			i++;
+		}
+	}
+	return (str);
+}
+
+int main (int ac, char **av)
+{
+	if (ac == 2)
+	{
+		ft_putendl(ft_strcapitalize(av[1]));
+	}
 }

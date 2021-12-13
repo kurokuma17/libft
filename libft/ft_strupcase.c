@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 20:43:40 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/13 16:55:59 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/12/13 17:56:11 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/13 17:58:54 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strupcase(char *str)
 {
-	if (ft_islower(c))
-		return (c - 32);
-	else
-		return (c);
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (ft_islower(str[i]))
+			str[i] = ft_toupper(str[i]);
+		i++;
+	}
+	return (str);
 }

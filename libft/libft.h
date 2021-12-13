@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:01:44 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/12 23:57:07 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/13 19:23:16 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,15 @@ void	ft_lstadd_back(t_list **alst, t_list *new);
 int		ft_lstsize(t_list *begin_list);
 t_list	*ft_lstlast(t_list *lst);
 size_t	ft_strcspn(const char *s, const char *charset);
+
+int		ft_islower(int c);
+int		ft_isupper(int c);
+int		ft_isblank(int c);
+int		ft_iscntrl(int c);
+int		ft_isgraph(int c);
+int		ft_isxdigit(int c);
+char	*ft_strlowcase(char *str);
+char	*ft_strupcase(char *str);
+char	*ft_strcapitalize(char *str);
 
 #endif

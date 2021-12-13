@@ -6,7 +6,7 @@
 #    By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/14 20:12:59 by trnguyen          #+#    #+#              #
-#    Updated: 2021/12/13 15:28:59 by trnguyen         ###   ########.fr        #
+#    Updated: 2021/12/13 20:35:24 by trnguyen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,10 @@ SRCS		=	ft_putchar.c ft_putstr.c ft_putnbr.c ft_putendl.c \
 				ft_lstnew.c ft_lstadd.c ft_lstdelone.c \
 				ft_lstiter.c ft_lstdel.c ft_lstmap.c \
 				ft_lstsize.c ft_lstadd_back.c ft_lstlast.c \
-				ft_strndup.c ft_isspace.c ft_strcspn.c
+				ft_strndup.c ft_isspace.c ft_strcspn.c \
+				ft_islower.c ft_isupper.c ft_isblank.c ft_iscntrl.c \
+				ft_isgraph.c ft_isxdigit.c ft_strlowcase.c ft_strupcase.c \
+				ft_strcapitalize.c
 
 OBJS		=	$(SRCS:.c=.o)
 

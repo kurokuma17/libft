@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 20:43:40 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/12/13 16:55:59 by trnguyen         ###   ########.fr       */
+/*   Created: 2021/12/13 16:32:48 by trnguyen          #+#    #+#             */
+/*   Updated: 2021/12/13 16:33:07 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_isupper(int c)
 {
-	if (ft_islower(c))
-		return (c - 32);
-	else
-		return (c);
+	return (c >= 'A' && c <= 'Z');
 }
