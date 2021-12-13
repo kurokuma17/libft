@@ -6,7 +6,7 @@
 #    By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/14 20:12:59 by trnguyen          #+#    #+#              #
-#    Updated: 2021/12/12 23:53:40 by trnguyen         ###   ########.fr        #
+#    Updated: 2021/12/13 15:28:59 by trnguyen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ CC			=	@ gcc
 
 RM			=	rm -f
 
-CFLAGS		=	-Wall -Wextra -Werror -I.
+CFLAGS		=	-Wall -Wextra -Werror
 
 all:		$(NAME)
 
@@ -50,4 +50,4 @@ clean:
 fclean:		clean
 			@ $(RM) $(NAME)
 
-re:			fclean $(NAME)
+re:			fclean all
