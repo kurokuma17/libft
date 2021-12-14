@@ -1,0 +1,15 @@
+Functions to write:
+	-atof
+	-itoa_base
+	-strspn
+	-strlcpy
+	-strtok
+	-strsep
+	-strbrk
+	-strcasecmp, strncasecmp
+	-strcasestr
+Funtion to rewrite:
+	-lstmap: use lstdel to free incase lstnew fail/ return null
+	-atoi to handle long value
+	-putchar(_fd) to handle unicode
+

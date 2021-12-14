@@ -6,7 +6,7 @@
 /*   By: trnguyen <trnguyen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:06:07 by trnguyen          #+#    #+#             */
-/*   Updated: 2021/11/14 20:09:56 by trnguyen         ###   ########.fr       */
+/*   Updated: 2021/12/14 16:54:25 by trnguyen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	last = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			last = (char *)s;
 		s++;
 	}
